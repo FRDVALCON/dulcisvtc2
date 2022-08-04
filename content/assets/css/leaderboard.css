@@ -158,7 +158,6 @@ html, body{
   }
 
 .luser{
-  font-size: 20px; 
   padding: 3px;
   float: left;
   width: 370px;
@@ -173,7 +172,7 @@ html, body{
 }
 
 .luser p{
-margin: 0 0 25px 0;
+margin: 0 0 20px 0;
 }
 
 .leaderboard{

@@ -2,7 +2,7 @@ fetch("https://api.dulcisvtc.com/jobs").then((res) => {
     res.json().then((data) => {
         const jobsTable = document.getElementById("jobdata").getElementsByTagName('tbody')[0];
 
-        data.sort((a, b) => b.stop_timestamp - a.stop_timestamp).map((itemData) => {
+        data.reverse().map((itemData) => {
             const row = jobsTable.insertRow();
 
             const username = row.insertCell();

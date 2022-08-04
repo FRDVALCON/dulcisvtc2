@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<title>Dulcis Logistics - DriversHub</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+<link rel="stylesheet" type="text/css" href="/admin.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="16x16"
+    href="https://static.truckersmp.com/images/vtc/logo/55939.1656874621.png">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="Link to Website">
+<meta property="og:title" content="Dulcis Logistics">
+<meta property="og:description"
+    content="Dulcis Logistics is a friendly and welcoming VTC. We aim to provide the players of TruckersMP with fun and exciting convoys. Dulcis Logistics was founded on the 3rd of July by Rodz, Owen and Dylan. If you're interested in joining, go ahead and apply!">
+<meta name="theme-color" content="#043d47">
+
+<body>
+    <div class="sidenav">
+        <div class="name">
+            <center>Dulcis</center>
+        </div>
+        <a href="/hub"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a>
+        <a href="/hub/jobs"><i class="fa fa-briefcase" aria-hidden="true"></i> Jobs</a>
+        <a href="/downloads"><i class="fa fa-download" aria-hidden="true"></i> Downloads</a>
+    </div>
+
+    <script src="admin.js"></script>
+
+    <div class="main">
+        <div class="admin">
+            <form>
+                <center><b>Add To Navio</b></center>
+                <input type="sid" placeholder="Steam Id" id="sid" name="sid" required><br>
+                <input type="submit" id="jtadd" value="Add"><br>
+            </form>
+
+            <form>
+                <center><b>Remove From Navio</b></center>
+                <input type="sid" placeholder="Steam Id" id="sid" name="sid" required><br>
+                <input type="submit" id="jtdel" value="Remove"><br>
+            </form>
+        </div>
+
+        <div class="users">
+            <div class="ulist">
+                <center><b>Member List</b></center>
+                <table class="jobs" id="ulist" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <td>Username</td>
+                            <td>Steam Id</td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

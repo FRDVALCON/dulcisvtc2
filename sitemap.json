@@ -1,0 +1,27 @@
+{
+    "fileroutes": {
+        "/": "index.html",
+        "/team": "team.html",
+        "/hub": "drivershub.html",
+        "/hub/jobs": "jobs.html",
+        "/hub/leaderboard": "leaderboard.html",
+        "/hub/downloads": "downloads.html",
+        "/assets/css/dhub.css": "assets/css/dhub.css",
+        "/assets/css/downloads.css": "assets/css/downloads.css",
+        "/assets/css/leaderboard.css": "assets/css/leaderboard.css",
+        "/assets/css/main.css": "assets/css/main.css",
+        "/assets/css/pfl.css": "assets/css/pfl.css",
+        "/assets/css/staff.css": "assets/css/staff.css",
+        "/assets/img/background.png": "assets/img/background.png",
+        "/assets/img/casper.png": "assets/img/casper.png",
+        "/assets/img/dylan.png": "assets/img/dylan.png",
+        "/assets/img/etsprofile.png": "assets/img/etsprofile.png",
+        "/assets/img/owen.png": "assets/img/owen.png",
+        "/assets/img/rodz.png": "assets/img/rodz.png",
+        "/assets/img/ui.png": "assets/img/ui.png",
+        "/assets/js/dhub.js": "assets/js/dhub.js",
+        "/assets/js/leaderboard.js": "assets/js/leaderboard.js",
+        "/assets/js/logoutbutton.js": "assets/js/logoutbutton.js",
+        "/assets/js/main.js": "assets/js/main.js"
+    }
+}

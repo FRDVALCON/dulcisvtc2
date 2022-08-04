@@ -171,6 +171,10 @@ html, body{
   color: #fefefe;
 }
 
+.luser p{
+margin: 0 0 10px 0;
+}
+
 .leaderboard{
   width: 100%;
 }

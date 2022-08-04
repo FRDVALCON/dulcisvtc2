@@ -158,6 +158,7 @@ html, body{
   }
 
 .luser{
+  padding: 3px;
   float: left;
   width: 382px;
   height: 115px;

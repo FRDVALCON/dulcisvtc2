@@ -158,23 +158,34 @@ html, body{
   }
 
 .luser{
-  padding: 3px;
-  float: left;
-  width: 370px;
-  height: 85px;
-  border-radius: 16px;
-  background-color: var(--secondarywhite);
-  margin: 1%;
-  box-shadow: #222222;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
   color: #fefefe;
+  border-radius: 16px;
+  width: 370px;
+  background-color: var(--secondarywhite);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .luser p{
-  margin: 5px auto;
+margin: 5px auto;
 }
 
 .leaderboard{
-  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 700px){
+  .leaderboard{
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+  }
 }

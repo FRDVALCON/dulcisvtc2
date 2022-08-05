@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <title>Dulcis Logistics - DriversHub</title>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
@@ -40,11 +39,12 @@
                     "December"
                 ];
 
-                document.write("Leaderboard for " + monthNames[new Date().getMonth()]);
+                document.getElementsByClassName("month")[0].innerHTML = "Leaderboard for " + monthNames[new Date().getMonth()];
             </script>
         </div>
         <div class="leaderboard" id="leaderboard"></div>
     </div>
+
 </body>
 
 </html>

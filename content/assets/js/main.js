@@ -1,12 +1,5 @@
-window.onload = async () => {
-    updateMembersTable();
-    updateMemberCount();
-    updateJobCount();
-    updateNews();
-};
-
-async function updateMembersTable() {
-    let { members } = (await (await fetch("https://api.dulcisvtc.com/vtc/members")).json()).response;
+fetch("//api.dulcisvtc.com/vtc/members").then(response => response.json()).then(({ response: { members } }) => {
+    document.getElementById("tuser").innerHTML = members.length;
     const membersTable = document.getElementById("membersTable").getElementsByTagName('tbody')[0];
 
     members = members.sort((a, b) => {
@@ -62,25 +55,17 @@ async function updateMembersTable() {
         usernameCell.innerHTML = member.username;
         roleCell.innerHTML = member.role;
     };
-};
+});
 
-async function updateMemberCount() {
-    const { members_count } = (await (await fetch("https://api.dulcisvtc.com/vtc/members")).json()).response;
-    document.getElementById("tuser").innerHTML = members_count;
-};
+fetch("//api.dulcisvtc.com/jobs").then(response => response.json()).then((jobs) => {
+    document.getElementById("tjobs").innerHTML = jobs.length;
+    document.getElementById("tdist").innerHTML = Math.round(jobs.reduce((acc, job) => acc + job.driven_distance, 0));
+});
 
-async function updateJobCount() {
-    document.getElementById("tjobs").innerHTML = (await (await fetch("https://api.dulcisvtc.com/jobs")).json()).length;
-
-    const reduced = (await (await fetch("https://api.dulcisvtc.com/jobs")).json()).reduce((acc, job) => acc + job.driven_distance, 0);
-    document.getElementById("tdist").innerHTML = Math.round(reduced);
-};
-
-async function updateNews() {
-    const response = await fetch("https://api.dulcisvtc.com/vtc/news");
-    const { response: { news } } = await response.json();
-
-    const newsHTML = news.map(({ id, title, content_summary, published_at, author, author_id }) => `
+fetch("//api.dulcisvtc.com/vtc/news").then(response => response.json()).then(({ response: { news } }) => {
+    document.getElementById("npost").innerHTML = news.sort((a, b) =>
+        new Date(b.published_at).getTime() - new Date(a.published_at).getTime()
+    ).map(({ id, title, content_summary, published_at, author, author_id }) => `
         <div class="article">
             <a href="https://truckersmp.com/vtc/55939/news/${id}" target="_blank"><h3>${title}</h3></a>
             <hr class="nhr">
@@ -88,6 +73,4 @@ async function updateNews() {
             <p> Published By <username><a href="https://truckersmp.com/user/${author_id}" target="_blank">${author}</a></username> at ${published_at}</p>
         </div>
     `).join("");
-
-    document.getElementById("npost").innerHTML = newsHTML;
-};
+});

@@ -12,7 +12,7 @@ jobs:
     name: Pull Request automation
     runs-on: ubuntu-latest
 
-    if: ${{ github.actor == "renovate[bot]" }}
+    if: ${{ github.actor == "renovate" }}
 
     steps:
       - name: Enable auto-merge

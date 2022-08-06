@@ -16,11 +16,11 @@ fetch("https://api.dulcisvtc.com/users").then((res) => res.json()).then((data) =
 });
 
 function formatPosition(i) {
-    if (`${i}`.endsWith("1")) {
+    if (`${i}`.endsWith("1") && !`${i}`.endsWith("11")) {
         return `${i}st`;
-    } else if (`${i}`.endsWith("2")) {
+    } else if (`${i}`.endsWith("2") && !`${i}`.endsWith("12")) {
         return `${i}nd`;
-    } else if (`${i}`.endsWith("3")) {
+    } else if (`${i}`.endsWith("3") && !`${i}`.endsWith("13")) {
         return `${i}rd`;
     } else {
         return `${i}th`;

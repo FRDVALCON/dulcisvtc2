@@ -130,3 +130,12 @@ html, body{
     align-items: center;
   }
 }
+
+.version{
+  text-align: center;
+  padding: 10px;
+  width: 90%;
+  background-color: #0a0a0a;
+  color: #c4c4c4;
+  border-radius: 16px;
+}

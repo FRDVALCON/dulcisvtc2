@@ -139,3 +139,15 @@ html, body{
   color: #c4c4c4;
   border-radius: 16px;
 }
+
+.alltime{
+  color: #fefefe;
+  text-decoration: none;
+  background-color: #333333;
+  border-radius: 16px;
+  padding: 10px;
+}
+
+.alltime:hover{
+  background-color: #4b4b4b;
+}

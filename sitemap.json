@@ -13,7 +13,8 @@
         "/assets/css/pfl.css": "assets/css/pfl.css",
         "/assets/css/staff.css": "assets/css/staff.css",
         "/assets/js/dhub.js": "assets/js/dhub.js",
-        "/assets/js/leaderboard.js": "assets/js/leaderboard.js",
+        "/assets/js/leaderboard_alltime.js": "assets/js/leaderboard_alltime.js",
+        "/assets/js/leaderboard_monthly.js": "assets/js/leaderboard_monthly.js",
         "/assets/js/logoutbutton.js": "assets/js/logoutbutton.js",
         "/assets/js/main.js": "assets/js/main.js"
     }

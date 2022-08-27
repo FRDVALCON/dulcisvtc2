@@ -1,8 +1,8 @@
 fetch("https://api.dulcisvtc.com/users").then((res) => res.json()).then((data) => {
     const leaderboardDiv = document.getElementById("leaderboard");
     data = data
-        .sort((a, b) => b.leaderboard.alltime_mileage - a.leaderboard.alltime_mileage)
-        .filter((member) => member.leaderboard.alltime_mileage > 1);
+        .sort((a, b) => (b.leaderboard.alltime_mileage ?? 0) - (a.leaderboard.alltime_mileage ?? 0))
+        .filter((member) => (member.leaderboard.alltime_mileage ?? 0) > 1);
 
     const users = data.map((user, i) => `
         <div class="luser">

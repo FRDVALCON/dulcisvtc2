@@ -1,7 +1,7 @@
 {
   "main": "dist/index.js",
   "scripts": {
-    "run": "node .",
+    "start": "node .",
     "build": "npx tsc",
     "build:run": "npx tsc && node ."
   },

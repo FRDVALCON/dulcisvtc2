@@ -15,9 +15,9 @@ fetch("//api.dulcisvtc.com/vtc/members").then(response => response.json()).then(
             return -1;
         } else if (b.role === "General Manager") {
             return 1;
-        } else if (a.role === "Human Resources (EM)") {
+        } else if (a.role === "Human Resources Manager") {
             return -1;
-        } else if (b.role === "Human Resources (EM)") {
+        } else if (b.role === "Human Resources Manager") {
             return 1;
         } else if (a.role === "Human Resources") {
             return -1;
@@ -26,6 +26,10 @@ fetch("//api.dulcisvtc.com/vtc/members").then(response => response.json()).then(
         } else if (a.role === "Event Manager") {
             return -1;
         } else if (b.role === "Event Manager") {
+            return 1;
+        } else if (a.role === "Media Manager") {
+            return -1;
+        } else if (b.role === "Media Manager") {
             return 1;
         } else if (a.role === "Developer") {
             return -1;

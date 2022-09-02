@@ -130,15 +130,6 @@ html, body{
   }
 }
 
-.version{
-  text-align: center;
-  padding: 10px;
-  width: 90%;
-  background-color: #0a0a0a;
-  color: #c4c4c4;
-  border-radius: 16px;
-}
-
 .alltime{
   color: #fefefe;
   text-decoration: none;
@@ -149,4 +140,68 @@ html, body{
 
 .alltime:hover{
   background-color: #4b4b4b;
+}
+
+@media screen and (max-width: 582px) {
+
+  .sidenav {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(20, 20, 20);
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding: 10px 10px;
+  }
+
+  .main {
+    margin-left: 120px;
+    padding: 0px 10px;
+  }
+
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 10px;
+    display: block;
+  }
+
+  .lout {
+    padding: 6px 8px 6px 16px;
+    width: 100%;
+    font-size: 12.5px;
+    color: var(--black);
+    display: block;
+    background-color: #20202000;
+    border-style: none;
+    text-align: left;
+  }
+
+  .luser{
+    color: #fefefe;
+    border-radius: 16px;
+    width: 260px;
+    background-color: var(--secondarywhite);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .alltime{
+    color: #fefefe;
+    text-decoration: none;
+    background-color: #333333;
+    border-radius: 16px;
+    padding: 2px;
+  }
+  
+  .alltime:hover{
+    background-color: #4b4b4b;
+  }
 }

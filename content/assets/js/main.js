@@ -2,7 +2,7 @@ fetch("//api.dulcisvtc.com/vtc/members").then(response => response.json()).then(
     document.getElementById("tuser").innerHTML = members.length;
 });
 
-fetch(//api.dulcisvtc.com/jobs").then(response => response.json()).then((jobs) => {
+fetch("//api.dulcisvtc.com/jobs").then(response => response.json()).then((jobs) => {
     document.getElementById("tjobs").innerHTML = jobs.length;
     document.getElementById("tdist").innerHTML = Math.round(jobs.reduce((acc, job) => acc + job.driven_distance, 0));
     document.getElementById("tfuel").innerHTML = Math.round(jobs.reduce((acc, job) => acc + job.fuel_used, 0));

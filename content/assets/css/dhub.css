@@ -95,7 +95,7 @@ html, body{
 .jobs{
   overflow-x:auto;
   border-radius: 16px;
-  width: 98.5%;
+  width: 96.5%;
   height: 900px;
   background-color: var(--white);
   padding: 10px 10px;

@@ -20,8 +20,8 @@ fetch("https://api.dulcisvtc.com/jobs").then((res) => {
             destinationCity.innerHTML = itemData.destination_city;
             destinationCompany.innerHTML = itemData.destination_company;
             cargo.innerHTML = itemData.cargo.name;
-            drivenDistance.innerHTML = `${Math.round(itemData.driven_distance)}km`;
-            fuelUsed.innerHTML = `${Math.round(itemData.driven_distance)}L`;
+            drivenDistance.innerHTML = `${Math.round(itemData.driven_distance).toLocaleString()}km`;
+            fuelUsed.innerHTML = `${Math.round(itemData.driven_distance).toLocaleString()}L`;
         });
     });
 });

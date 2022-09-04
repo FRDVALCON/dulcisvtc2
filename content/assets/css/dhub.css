@@ -205,7 +205,7 @@ hr.nhr {
   padding-bottom: 10px;
   float: left;
   width: 47.4%;
-  height: 400px;
+  height: 350px;
   overflow-y: scroll;
   margin-right: 2%;
   background-color: #131313;
@@ -221,7 +221,7 @@ hr.nhr {
   padding-bottom: 10px;
   float: left;
   width: 47.4%;
-  height: 400px;
+  height: 350px;
   overflow-y: scroll;
   margin-right: 2%;
   background-color: #131313;
@@ -351,7 +351,7 @@ hr.statline{
     padding-bottom: 10px;
     float: right;
     width: 99%;
-    height: 900px;
+    height: 250px;
     overflow-y: scroll;
     margin-right: 2%;
     background-color: #131313;
@@ -368,7 +368,8 @@ hr.statline{
     padding-bottom: 10px;
     float: right;
     width: 99%;
-    max-height: 350px;
+    max-height: 300px;
+    overflow-y: scroll;
     margin-right: 2%;
     background-color: #131313;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -502,6 +503,10 @@ hr.statline{
 colname{
   color: #057083;
   font-size: 20px;
+}
+
+.pscc:hover{
+  background-color: #161616;
 }
 
 stitle{

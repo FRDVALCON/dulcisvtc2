@@ -9,6 +9,7 @@ import sitemap from "../sitemap.json";
 import { Config } from "../types";
 import { logger } from "./handlers/logger";
 import axios from "axios";
+import { inspect } from "util";
 const config = require("../config") as Config;
 
 const app = fastify();
@@ -55,12 +56,12 @@ app.get("/login", async (req, res) => {
             code,
             scope: ["identify"],
             grantType: "authorization_code",
-        }).catch(() => null);
+        }).catch((e) => { logger.error(inspect(e)); });
 
         if (!token || !token.access_token) {
             res.redirect("/");
         } else {
-            const user = await oauth.getUser(token.access_token).catch(() => null);
+            const user = await oauth.getUser(token.access_token).catch((e) => { logger.error(inspect(e)); });
             if (!user) {
                 res.redirect("/");
             } else {
@@ -75,7 +76,8 @@ app.get("/login", async (req, res) => {
         };
     };
 });
-app.get("/logout", async (req, res) => {
+
+app.get("/logout", (req, res) => {
     req.session.user = undefined;
     res.redirect("/");
 });

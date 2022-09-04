@@ -3,9 +3,9 @@ fetch("//api.dulcisvtc.com/vtc/members").then(response => response.json()).then(
 });
 
 fetch("//api.dulcisvtc.com/jobs").then(response => response.json()).then((jobs) => {
-    document.getElementById("tjobs").innerHTML = jobs.length;
-    document.getElementById("tdist").innerHTML = Math.round(jobs.reduce((acc, job) => acc + job.driven_distance, 0));
-    document.getElementById("tfuel").innerHTML = Math.round(jobs.reduce((acc, job) => acc + job.fuel_used, 0));
+    document.getElementById("tjobs").innerHTML = jobs.length.toLocaleString();
+    document.getElementById("tdist").innerHTML = `${Math.round(jobs.reduce((acc, job) => acc + job.driven_distance, 0)).toLocaleString()}km`;
+    document.getElementById("tfuel").innerHTML = `${Math.round(jobs.reduce((acc, job) => acc + job.fuel_used, 0)).toLocaleString()}L`;
 });
 
 fetch("//api.dulcisvtc.com/vtc/news").then(response => response.json()).then(({ response: { news } }) => {
@@ -22,5 +22,5 @@ fetch("//api.dulcisvtc.com/vtc/news").then(response => response.json()).then(({ 
 });
 
 fetch("//api.dulcisvtc.com/users").then((res) => res.json()).then((data) => {
-    document.getElementById("mdist").innerHTML = Math.round(data.reduce((acc, data) => acc + data.leaderboard.monthly_mileage, 0));
+    document.getElementById("mdist").innerHTML = `${Math.round(data.reduce((acc, data) => acc + data.leaderboard.monthly_mileage, 0)).toLocaleString()}km`;
 });

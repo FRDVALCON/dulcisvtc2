@@ -12,6 +12,7 @@ fetch("https://api.dulcisvtc.com/jobs").then((res) => {
             const destinationCompany = row.insertCell();
             const cargo = row.insertCell();
             const drivenDistance = row.insertCell();
+            const fuelUsed = row.insertCell();
 
             username.innerHTML = itemData.driver.username;
             sourceCity.innerHTML = itemData.source_city;
@@ -19,7 +20,8 @@ fetch("https://api.dulcisvtc.com/jobs").then((res) => {
             destinationCity.innerHTML = itemData.destination_city;
             destinationCompany.innerHTML = itemData.destination_company;
             cargo.innerHTML = itemData.cargo.name;
-            drivenDistance.innerHTML = Math.round(itemData.driven_distance);
+            drivenDistance.innerHTML = `${Math.round(itemData.driven_distance)}km`;
+            fuelUsed.innerHTML = `${Math.round(itemData.driven_distance)}L`;
         });
     });
 });

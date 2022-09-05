@@ -12,6 +12,10 @@ html, body{
   --thirdthite: rgb(20, 20, 20);
 }
 
+hr.nhr {
+  border: 1px solid #222222
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -24,6 +28,10 @@ html, body{
 }
 
 .sidenav {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 1%;
+  border-radius: 16px;
   height: 100%;
   width: 200px;
   position: fixed;
@@ -78,7 +86,7 @@ html, body{
 
 .main {
   text-align: center;
-  margin-left: 220;
+  margin-left: 240;
   padding: 0px 0px;
 }
 
@@ -93,6 +101,7 @@ html, body{
 
 
 .jobs{
+  margin-top: 1%;
   overflow-x:auto;
   border-radius: 16px;
   width: 98.5%;

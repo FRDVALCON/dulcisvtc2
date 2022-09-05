@@ -24,6 +24,10 @@ html, body{
 }
 
 .sidenav {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 1%;
+  border-radius: 16px;
   height: 100%;
   width: 200px;
   position: fixed;
@@ -78,7 +82,7 @@ html, body{
 
 .main {
   text-align: center;
-  margin-left: 255;
+  margin-left: 275;
   padding: 0px 0px;
 }
 
@@ -148,7 +152,7 @@ hr.nhr {
 }
 
 .welcomeb{
-  margin-top: 40px;
+  margin-top: 1%;
   padding-top: 10px;
   padding-bottom: 10px;
    width: 98%;

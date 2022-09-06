@@ -38,6 +38,7 @@ html, body{
   overflow-x: hidden;
   padding-top: 20px;
   padding: 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .lout {
@@ -82,7 +83,7 @@ html, body{
 
 .main {
   text-align: center;
-  margin-left: 275;
+  margin-left: 275px;
   padding: 0px 0px;
 }
 
@@ -268,10 +269,11 @@ hr.nhr {
 }
 
 .statistic2{
+  margin-right: 1%;
   padding: 10px;
   margin-top: 15px;
   background-color: #1a1a1a;
-  width: 96.5%;
+  max-width: 100%;
   border-radius: 16px;
 }
 
@@ -290,7 +292,7 @@ hr.statline{
   margin-right: 10PX;
 }
 
-@media screen and (max-width: 582px) {
+@media screen and (max-width: 700px) {
 
   .statistic2{
     padding: 3px;
@@ -465,9 +467,10 @@ hr.statline{
 }
 
 .article{
-  padding: 5px 5px;
+  margin-right: 1%;
+  padding: 5px;
   margin-top: 2%;
-  width: 97.5%;
+  max-width: 100%;
   min-height: 90px;
   background-color: #1a1a1a;
   border-radius: 16px;

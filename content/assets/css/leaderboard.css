@@ -16,6 +16,15 @@ hr.nhr {
   border: 1px solid #222222
 }
 
+.version{
+  text-align: center;
+  padding: 10px;
+  width: 90%;
+  background-color: #0a0a0a;
+  color: #c4c4c4;
+  border-radius: 16px;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

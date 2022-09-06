@@ -1,6 +1,7 @@
 import fastify from "fastify";
 import fastifyCookie from "@fastify/cookie";
 import fastifySession from "@fastify/session";
+import SteamAuth from "node-steam-openid";
 import { createReadStream } from "fs";
 import { join } from "path";
 import Oauth from "discord-oauth2";
@@ -25,17 +26,22 @@ app.addHook("preHandler", async (req, res) => {
         req.url.includes("/hub")
         && (
             !req.session.user
-            || await axios("https://api.dulcisvtc.com/isdriver/" + req.session.user.id).then((res: any) => !res.data.isdriver)
+            || await axios("https://api.dulcisvtc.com/isdriver/" + req.session.user.discord_id).then((res: any) => !res.data.isdriver)
         )
     ) {
         if (req.session.user) return res.redirect("/");
-        return res.redirect("/login");
+        return res.redirect("/oauth/discord");
     };
 });
 const oauth = new Oauth({
     clientId: config.oauth.clientId,
     clientSecret: config.oauth.clientSecret,
     redirectUri: config.oauth.callbackUrl,
+});
+const steam = new SteamAuth({
+    realm: config.steam.realm,
+    returnUrl: config.steam.returnUrl,
+    apiKey: config.steam.apiKey
 });
 
 for (const [path, file] of Object.entries(sitemap.fileroutes)) {
@@ -45,8 +51,8 @@ for (const [path, file] of Object.entries(sitemap.fileroutes)) {
     });
 };
 
-app.get("/login", async (req, res) => {
-    const code = (req.query as { code: string | undefined }).code;
+app.get("/oauth/discord", async (req, res) => {
+    const { code } = req.query as { code?: string };
     if (!code) {
         res.redirect(oauth.generateAuthUrl({
             scope: ["identify"]
@@ -65,16 +71,50 @@ app.get("/login", async (req, res) => {
             if (!user) {
                 res.redirect("/");
             } else {
+                const { data } = await axios("https://api.dulcisvtc.com/users");
+                const datauser = data.find((x: { discord_id: string; }) => x.discord_id === user.id);
                 req.session.user = {
-                    id: user.id,
+                    discord_id: user.id,
                     username: user.username,
                     discriminator: user.discriminator,
                     avatar: user.avatar,
                 };
+                if (datauser) req.session.user.steam_id = datauser.steam_id;
                 res.redirect("/hub");
             };
         };
     };
+});
+
+app.get("/oauth/steam", async (req, res) => {
+    if (
+        !req.session.user
+        || await axios("https://api.dulcisvtc.com/isdriver/" + req.session.user.discord_id).then((res: any) => !res.data.isdriver)
+    ) return res.redirect("/hub");
+
+    try {
+        const user = await steam.authenticate(req);
+        req.session.user.steam_id = user.steamid;
+        await axios({
+            url: [
+                "https://api.dulcisvtc.com",
+                `/setdiscordid?secret=${config.secret}&steam_id=${user.steamid}&discord_id=${req.session.user.discord_id}`
+            ].join(""),
+            timeout: 10_000
+        }).then((r) => {
+            if (r.status === 404) res.redirect("/hub/stats?err=nouser");
+            else if (r.status === 200) res.redirect("/hub/stats");
+        }).catch((e) => {
+            logger.error(inspect(e));
+            res.send("something bad hapenned. please write a message in driver-support channel.")
+        });
+    } catch (e) {
+        res.redirect(await steam.getRedirectUrl());
+    };
+});
+
+app.get("/user", (req, res) => {
+    return res.send(req.session.user);
 });
 
 app.get("/logout", (req, res) => {

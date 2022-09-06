@@ -159,7 +159,7 @@ hr.nhr {
   background-color: #4b4b4b;
 }
 
-@media screen and (max-width: 582px) {
+@media screen and (max-width: 700px) {
 
   .sidenav {
     height: 100%;

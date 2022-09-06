@@ -215,6 +215,8 @@ html, body{
   }
 
   .stat3{
+    padding-left: 0.5%;
+    padding-right: 0.5%;
     text-align: center;
     margin-top: 2%;
     border-radius: 16px;
@@ -361,6 +363,8 @@ html, body{
     }
 
     .stat3{
+      padding-left: 0.5%;
+      padding-right: 0.5%;
       text-align: center;
       margin-top: 7px;
       border-radius: 16px;

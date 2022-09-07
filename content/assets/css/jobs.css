@@ -129,9 +129,12 @@ table tfoot{
   background-color: #043d47;
 }
 
-th {
+th{
+  padding: 15px 10px;
   text-align: left;
-  padding: 8px;
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 tr:nth-child(even) {
@@ -143,8 +146,12 @@ tbody tr:hover{
 }
 
 td{
-  border-style: solid;
-  border-color: #ffffff00;
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-size: 15px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
 }
 
 .version{

@@ -70,6 +70,17 @@ html, body{
   background-color: #e9e9e96b;
 }
 
+.arnav{
+  border-radius: 16px 0px 0px 16px;
+  background-color: #043d47;
+  color: var(--black);
+  width: 100%;
+}
+
+.arnav:hover{
+  background-color: #075563;
+}
+
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;

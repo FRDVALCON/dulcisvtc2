@@ -24,3 +24,12 @@ fetch("//api.dulcisvtc.com/vtc/news").then(response => response.json()).then(({ 
 fetch("//api.dulcisvtc.com/users").then((res) => res.json()).then((data) => {
     document.getElementById("mdist").innerHTML = `${Math.round(data.reduce((acc, data) => acc + data.leaderboard.monthly_mileage, 0)).toLocaleString()}km`;
 });
+
+function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+  }
+  

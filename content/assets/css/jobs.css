@@ -58,7 +58,8 @@ hr.nhr {
 .lout:hover {
   background-color: #e9e9e96b;
   border-style: none;
-  border-radius: 16px;
+  border-radius: 16px 0px 0px 16px;
+  width: 110%;
 }
 
 .navanme{
@@ -67,6 +68,7 @@ hr.nhr {
 
 .rnav{
   color: var(--black);
+  width: 100%;
 }
 
 .rnav:hover{

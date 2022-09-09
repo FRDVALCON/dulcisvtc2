@@ -101,10 +101,10 @@ app.get("/oauth/steam", async (req, res) => {
                 `/setdiscordid?secret=${config.secret}&steam_id=${user.steamid}&discord_id=${req.session.user.discord_id}`
             ].join(""),
             timeout: 10_000
-        }).then((r) => {
-            if (r.status === 404) res.redirect("/hub/stats?err=nouser");
-            else if (r.status === 200) res.redirect("/hub/stats");
+        }).then(() => {
+            res.redirect("/hub/stats");
         }).catch((e) => {
+            if (e.response.status === 404) return res.redirect("/hub/stats?err=nouser");
             logger.error(inspect(e));
             res.send("something bad hapenned. please write a message in driver-support channel.")
         });

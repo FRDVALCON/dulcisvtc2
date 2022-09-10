@@ -1,4 +1,4 @@
-fetch("https://api.dulcisvtc.com/jobs").then((res) => res.json()).then((data) => {
+fetch("//api.dulcisvtc.com/jobs").then((res) => res.json()).then((data) => {
     const jobsTable = document.getElementById("jobdata").getElementsByTagName('tbody')[0];
 
     data.reverse().map((itemData) => {

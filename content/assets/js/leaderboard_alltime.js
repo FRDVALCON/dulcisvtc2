@@ -1,4 +1,4 @@
-fetch("https://api.dulcisvtc.com/users").then((res) => res.json()).then((data) => {
+fetch("//api.dulcisvtc.com/users").then((res) => res.json()).then((data) => {
     const leaderboardDiv = document.getElementById("leaderboard");
     data = data
         .sort((a, b) => (b.leaderboard.alltime_mileage ?? 0) - (a.leaderboard.alltime_mileage ?? 0))

@@ -1,4 +1,4 @@
-fetch("https://api.dulcisvtc.com/jobs").then((res) => res.json()).then(async (data) => {
+fetch("//api.dulcisvtc.com/jobs").then((res) => res.json()).then(async (data) => {
     if (new URLSearchParams(window.location.search).get("err") === "nouser")
         return alert("Please log a job in order to link your account!");
     const user = await fetch("/user").then((res) => res.json());

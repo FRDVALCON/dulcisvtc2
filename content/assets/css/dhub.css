@@ -521,9 +521,14 @@ hr.statline{
 }
 
 .pscc button{
-  background-color: #036374;
+  background-color: #1a1a1a00;
   color: var(--black);
-  border-color: #036374;
+  border-style: none;
+}
+
+.pscc button:hover{
+  font-size: 14;
+  margin-left: -0.5px;
 }
 
 colname{

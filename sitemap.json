@@ -18,6 +18,7 @@
         "/assets/css/staff.css": "assets/css/staff.css",
         "/assets/js/dhub.js": "assets/js/dhub.js",
         "/assets/js/stats.js": "assets/js/stats.js",
+        "/assets/js/lightmode.js": "assets/js/lightmode.js",
         "/assets/js/leaderboard_alltime.js": "assets/js/leaderboard_alltime.js",
         "/assets/js/leaderboard_monthly.js": "assets/js/leaderboard_monthly.js",
         "/assets/js/logoutbutton.js": "assets/js/logoutbutton.js",

@@ -1,29 +1,30 @@
-html, body{
+html{
   background-size: contain;
-  background-color: var(--white);
   padding: 0%;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+body{
+  background-color: var(--bck1);
+}
+
 :root{
-  --white: rgb(27, 27, 27);
-  --black: rgb(212, 212, 212);
-  --secondarywhite: #202020;
-  --thirdthite: rgb(20, 20, 20);
+  --bck1: rgb(29, 29, 29);
+  --font: rgb(212, 212, 212);
+  --bck2: #131313;
+  --bck3: rgb(20, 20, 20);
+  --bck4: #1a1a1a;
+  --bck5: #161616;
 }
-
-hr.nhr {
-  border: 1px solid #222222
-}
-
-.version{
-  text-align: center;
-  padding: 10px;
-  width: 90%;
-  background-color: #0a0a0a;
-  color: #c4c4c4;
-  border-radius: 16px;
-}
+ 
+.lightmode{
+  --bck1: rgb(211, 211, 211);
+  --font: rgb(19, 19, 19);
+  --bck2: #d4d4d4;
+  --bck3: rgb(202, 202, 202);
+  --bck4: #c4c4c4;
+  --bck5: #d8d8d8;
+  }
 
 ::-webkit-scrollbar {
   display: none;
@@ -47,17 +48,18 @@ hr.nhr {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(20, 20, 20);
+  background-color: var(--bck3);
   overflow-x: hidden;
   padding-top: 20px;
   padding: 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .lout {
   padding: 6px 8px 6px 16px;
   width: 100%;
   font-size: 25px;
-  color: var(--black);
+  color: var(--font);
   display: block;
   background-color: #20202000;
   border-style: none;
@@ -76,7 +78,7 @@ hr.nhr {
 }
 
 .rnav{
-  color: var(--black);
+  color: var(--font);
   width: 100%;
 }
 
@@ -87,12 +89,8 @@ hr.nhr {
 .arnav{
   border-radius: 16px 0px 0px 16px;
   background-color: #043d47;
-  color: var(--black);
+  color: var(--font);
   width: 100%;
-}
-
-.arnav:hover{
-  background-color: #075563;
 }
 
 .sidenav a {
@@ -107,7 +105,7 @@ hr.nhr {
 }
 
 .main {
-  margin-left: 240px;
+  margin-left: 220px;
   padding: 0px 10px;
 }
 
@@ -128,10 +126,10 @@ hr.nhr {
 }
 
 .luser{
-  color: #fefefe;
+  color: var(--font);
   border-radius: 16px;
   width: 360px;
-  background-color: var(--secondarywhite);
+  background-color: var(--bck3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,9 +159,9 @@ hr.nhr {
 }
 
 .alltime{
-  color: #fefefe;
+  color: var(--font);
   text-decoration: none;
-  background-color: #333333;
+  background-color: var(--bck4);
   border-radius: 16px;
   padding: 10px;
 }
@@ -172,7 +170,7 @@ hr.nhr {
   background-color: #4b4b4b;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 582px) {
 
   .sidenav {
     height: 100%;
@@ -181,7 +179,7 @@ hr.nhr {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(20, 20, 20);
+    background-color: var(--bck3);
     overflow-x: hidden;
     padding-top: 20px;
     padding: 10px 10px;
@@ -203,15 +201,25 @@ hr.nhr {
     padding: 6px 8px 6px 16px;
     width: 100%;
     font-size: 12.5px;
-    color: var(--black);
+    color: var(--font);
     display: block;
     background-color: #20202000;
     border-style: none;
     text-align: left;
   }
 
+  .version{
+    text-align: center;
+    padding: 10px;
+    width: 90%;
+    background-color: var(--bck4);
+    color: var(--font);
+    border-radius: 16px;
+    font-size: 10px;
+  }
+
   .luser{
-    color: #fefefe;
+    color: var(--font);
     border-radius: 16px;
     width: 260px;
     background-color: var(--secondarywhite);
@@ -224,9 +232,9 @@ hr.nhr {
   }
 
   .alltime{
-    color: #fefefe;
+    color: var(--font);
     text-decoration: none;
-    background-color: #333333;
+    background-color: var(--bck4);
     border-radius: 16px;
     padding: 2px;
   }
@@ -234,4 +242,66 @@ hr.nhr {
   .alltime:hover{
     background-color: #4b4b4b;
   }
+}
+
+hr.nhr {
+  border: 1px solid var(--bck1);
+}
+
+.version{
+  text-align: center;
+  padding: 10px;
+  width: 90%;
+  background-color: var(--bck4);
+  color: var(--font);
+  border-radius: 16px;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  text-align: center;
+  background-color: var(--bck4);
+  margin: 15% auto; 
+  padding: 20px;
+  color: var(--font);
+  border: 1px solid var(--bck5);
+  width: 30%;
+  border-radius: 16px; 
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.light-mode-toggle{
+  background-color: #036374;
+  padding: 5px 10px;
+  color: var(--font);
+  border-radius: 16px;
+  font-size: 17px;
+  border-style: none;
+  text-decoration: none;
 }

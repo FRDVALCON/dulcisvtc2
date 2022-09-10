@@ -26,15 +26,29 @@
         <hr class="nhr">
         <a class="rnav" href="/hub/stats"><i class="fa fa-chart-line" aria-hidden="true"></i> Stats</a>
         <hr class="nhr">
+        <button class="lout" id="myBtn"><i class="fa fa-cog" aria-hidden="true"></i> Settings</button>
         <button class="lout" id="logoutButton"><i class="fa fa-power-off" aria-hidden="true"></i> Log Out</button>
         <hr class="nhr">
         <div class="version">
-            DulcisHub v2.2.4
+            DulcisHub v2.2.5
         </div>
         <script src="/assets/js/logoutbutton.js"></script>
     </div>
 
     <div class="main">
+
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p><i class="fa fa-cog" aria-hidden="true"></i> Settings</p>
+              <hr class="nhr">
+              <button class="light-mode-toggle" id="light-mode-toggle"> Toggle Theme</button><p></p>
+              <a class="light-mode-toggle" href="/oauth/steam"><i class="fab fa-steam" aria-hidden="true"></i> Link Steam</a>
+              <script src="/assets/js/lightmode.js"></script>
+            </div>
+          </div>
+
         <div class="downloads">
             <div class="downloadd">
                 <img src="https://cdn.discordapp.com/attachments/996511232494419998/1005135076620775445/Untitled.png">

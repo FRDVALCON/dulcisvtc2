@@ -1,79 +1,60 @@
-.downloads{
-  width: 100%;
-  display: block;
-  color: rgb(212, 212, 212);
+:root{
+  --bck1: rgb(29, 29, 29);
+  --font: rgb(212, 212, 212);
+  --bck2: #131313;
+  --bck3: rgb(20, 20, 20);
+  --bck4: #1a1a1a;
+  --bck5: #161616;
+}
+ 
+.lightmode{
+  --bck1: rgb(211, 211, 211);
+  --font: rgb(19, 19, 19);
+  --bck2: #d4d4d4;
+  --bck3: rgb(202, 202, 202);
+  --bck4: #c4c4c4;
+  --bck5: #d8d8d8;
+  }
+  
+  
+  .downloads{
+    width: 100%;
+    display: block;
+    color: var(--font)
 }
 
 .btn{
-  width: 98%;
-  height: 40px;
-  padding: 10px 10px;
-  border-radius: 16px;
-  background-color: #1a1a1a;
-  color: rgb(212, 212, 212);
-  text-decoration: none;
+    width: 98%;
+    height: 40px;
+    padding: 10px 10px;
+    border-radius: 16px;
+    background-color: var(--bck3);
+    color: var(--font);
+    text-decoration: none;
 }
 
 .btn:hover{
-text-decoration: underline;
-background-color: #222222;
+  text-decoration: underline;
+  background-color: var(--bck4);
 }
 
 .downloadd{
-  border-radius: 16px;
-  width: 250px;
-  height: 300px;
-  margin: 0.5%;
-  background-color: #131313;
-  float: left;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 16px;
+    width: 250px;
+    height: 300px;
+    margin: 0.5%;
+    background-color: var(--bck2);
+    float: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 img{
-border-radius: 16px;
-  width: 240px;
-  height: 240px;
-  border-color: rgb(19, 19, 19);
-  border-style: solid;
-  border-width: 5px;
-  margin-bottom: 4%;
+  border-radius: 16px;
+    width: 240px;
+    height: 240px;
+    border-color: var(--bck2);
+    border-style: solid;
+    border-width: 5px;
+    margin-bottom: 4%;
 }
 
-@media screen and (max-width: 700px) {
-
-  .sidenav {
-    height: 100%;
-    width: 100px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(20, 20, 20);
-    overflow-x: hidden;
-    padding-top: 20px;
-    padding: 10px 10px;
-  }
-
-  .main {
-    margin-left: 120px;
-    padding: 0px 10px;
-  }
-
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 10px;
-    display: block;
-  }
-
-  .lout {
-    padding: 6px 8px 6px 16px;
-    width: 100%;
-    font-size: 12.5px;
-    color: var(--black);
-    display: block;
-    background-color: #20202000;
-    border-style: none;
-    text-align: left;
-  }
-}

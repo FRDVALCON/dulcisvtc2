@@ -106,7 +106,7 @@ app.get("/oauth/steam", async (req, res) => {
         }).catch((e) => {
             if (e.response.status === 404) return res.redirect("/hub/stats?err=nouser");
             logger.error(inspect(e));
-            res.send("something bad hapenned. please write a message in driver-support channel.")
+            res.send("something bad hapenned. please write a message in general-support channel.")
         });
     } catch (e) {
         res.redirect(await steam.getRedirectUrl());

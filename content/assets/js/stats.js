@@ -1,7 +1,7 @@
-fetch("https://api.dulcisvtc.com/jobs").then((x) => x.json()).then(async (data) => {
+fetch("https://api.dulcisvtc.com/jobs").then((res) => res.json()).then(async (data) => {
     if (new URLSearchParams(window.location.search).get("err") === "nouser")
         return alert("Please log a job in order to link your account!");
-    const user = await fetch("/user").then((x) => x.json());
+    const user = await fetch("/user").then((res) => res.json());
     if (!user.steam_id) return alert("Please link your steam account!");
 
     const jobs = data.filter((x) => x.driver.steam_id === user.steam_id);

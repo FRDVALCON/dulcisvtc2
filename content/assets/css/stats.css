@@ -8,22 +8,27 @@ body{
   background-color: var(--bck1);
 }
 
+
 :root{
   --bck1: rgb(29, 29, 29);
   --font: rgb(212, 212, 212);
+  --font1: rgb(212, 212, 212);
   --bck2: #131313;
   --bck3: rgb(20, 20, 20);
   --bck4: #1a1a1a;
   --bck5: #161616;
+  --bck6: #313131;
 }
  
 .lightmode{
   --bck1: rgb(211, 211, 211);
   --font: rgb(19, 19, 19);
+  --font1: rgb(212, 212, 212);
   --bck2: #d4d4d4;
   --bck3: rgb(202, 202, 202);
   --bck4: #c4c4c4;
   --bck5: #d8d8d8;
+  --bck6: #ffffff;
   }
 
 ::-webkit-scrollbar {
@@ -93,7 +98,7 @@ body{
 .arnav{
   border-radius: 16px 0px 0px 16px;
   background-color: #043d47;
-  color: var(--font);
+  color: var(--font1);
   width: 100%;
 }
 
@@ -150,10 +155,12 @@ table {
 
 table thead{
   background-color: #043d47;
+  color: var(--font1);
 }
 
 table tfoot{
   background-color: #043d47;
+  color: var(--font1);
 }
 
 th {
@@ -162,7 +169,7 @@ th {
 }
 
 tr:nth-child(even) {
-  background-color: var(--bck2);
+  background-color: var(--bck4);
 }
 
 td{

@@ -6,7 +6,7 @@
     "build:run": "npx tsc && node ."
   },
   "dependencies": {
-    "@fastify/cookie": "^7.3.1",
+    "@fastify/cookie": "^8.0.0",
     "@fastify/session": "^9.0.0",
     "axios": "^0.27.2",
     "discord-oauth2": "^2.10.0",

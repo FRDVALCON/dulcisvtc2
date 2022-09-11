@@ -25,13 +25,12 @@
     ajv-formats "^2.1.1"
     fast-uri "^2.0.0"
 
-"@fastify/cookie@^7.3.1":
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/@fastify/cookie/-/cookie-7.3.1.tgz#cbcbb54b6a614acd0b1df388d836cf7cf627a7be"
-  integrity sha512-io16UMtIkXKvHUTm63LHPQpMm1NcQ7NT2aAeGYLzX94jJXeQnu0by8VSm3iCrfnFuF0bGTWzUtefHSjKHNxppw==
+"@fastify/cookie@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@fastify/cookie/-/cookie-8.0.0.tgz#470519200f96d966efd81e5e0fd1ddb1a6c87f54"
+  integrity sha512-VYEKAeJXx0ezormR7IlVd7iwMZDY+ksMUk50ruGKiMiuvMBkivzsPzNckR8dMme+5rxjXgOyfLunpS9jCvWlqA==
   dependencies:
     cookie "^0.5.0"
-    cookie-signature "^1.1.0"
     fastify-plugin "^4.0.0"
 
 "@fastify/deepmerge@^1.0.0":

@@ -47,3 +47,32 @@ lightModeToggle.addEventListener('click', () => {
     disableLightMode(); 
   }
 });
+
+let oledMode = localStorage.getItem('oledMode'); 
+
+const oledModeToggle = document.querySelector('#oled-mode-toggle');
+
+const enableOledMode = () => {
+  document.body.classList.add('oledmode');
+  localStorage.setItem('oledMode', 'enabled');
+}
+
+const disableOledMode = () => {
+  document.body.classList.remove('oledmode');
+  localStorage.setItem('oledMode', null);
+}
+ 
+if (oledMode === 'enabled') {
+  enableOledMode();
+}
+
+oledModeToggle.addEventListener('click', () => {
+
+  oledMode = localStorage.getItem('oledMode'); 
+  
+  if (oledMode !== 'enabled') {
+    enableOledMode(); 
+  } else {  
+    disableOledMode(); 
+  }
+});

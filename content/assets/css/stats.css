@@ -31,6 +31,17 @@ body{
   --bck6: #ffffff;
   }
 
+  .oledmode{
+    --bck1: rgb(0, 0, 0);
+    --font: rgb(212, 212, 212);
+    --font2: rgb(212, 212, 212);
+    --bck2: #040404;
+    --bck3: #020202;
+    --bck4: #070707;
+    --bck5: #060606;
+    --bck6: #0e0e0e;
+    }
+
 ::-webkit-scrollbar {
   display: none;
 }

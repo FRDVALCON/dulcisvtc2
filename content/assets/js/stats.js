@@ -22,7 +22,7 @@ fetch("//api.dulcisvtc.com/jobs").then((res) => res.json()).then(async (data) =>
 
         const sourceCity = row.insertCell();
         const destinationCity = row.insertCell();
-        const caro = row.insertCell();
+        const cargo = row.insertCell();
         const drivenDistance = row.insertCell();
         const fuelUsed = row.insertCell();
         const damage = row.insertCell();

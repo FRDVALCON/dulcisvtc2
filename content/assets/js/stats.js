@@ -22,12 +22,14 @@ fetch("//api.dulcisvtc.com/jobs").then((res) => res.json()).then(async (data) =>
 
         const sourceCity = row.insertCell();
         const destinationCity = row.insertCell();
+        const caro = row.insertCell();
         const drivenDistance = row.insertCell();
         const fuelUsed = row.insertCell();
         const damage = row.insertCell();
 
         sourceCity.innerHTML = itemData.source_city;
         destinationCity.innerHTML = itemData.destination_city;
+        cargo.innerHTML = itemData.cargo.name;
         drivenDistance.innerHTML = `${Math.round(itemData.driven_distance).toLocaleString()}km`;
         fuelUsed.innerHTML = `${Math.round(itemData.fuel_used).toLocaleString()}L`
         damage.innerHTML = `${Math.round(itemData.cargo.damage * 100).toLocaleString()}%`;

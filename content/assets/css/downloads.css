@@ -37,14 +37,14 @@
     height: 40px;
     padding: 10px 10px;
     border-radius: 16px;
-    background-color: var(--bck3);
+    background-color: var(--bck4);
     color: var(--font);
     text-decoration: none;
 }
 
 .btn:hover{
   text-decoration: underline;
-  background-color: var(--bck4);
+  background-color: var(--bck5);
 }
 
 .downloadd{

@@ -269,6 +269,7 @@ hr.nhr {
   margin-right: 2%;
   background-color: var(--bck2);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 15px;
 }
 .stat4{
   margin-top: 2%;
@@ -285,6 +286,7 @@ hr.nhr {
   margin-right: 2%;
   background-color: var(--bck2);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 15px;
 }
 
 .cont{

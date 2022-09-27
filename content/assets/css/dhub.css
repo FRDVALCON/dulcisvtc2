@@ -277,6 +277,7 @@ hr.nhr {
 }
 
 .stat5{
+  margin-bottom: 2%;
   text-align: center;
   margin-top: 2%;
   padding-left: 0.5%;
@@ -292,6 +293,12 @@ hr.nhr {
   background-color: var(--bck2);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+hr.nhr1 {
+  border: 1px solid var(--bck5);
+  margin-left: -1%;
+}
+
 .stat6{
   margin-top: 2%;
   padding-left: 0.5%;

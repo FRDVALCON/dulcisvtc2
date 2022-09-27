@@ -77,3 +77,13 @@ img{
   border-radius: 5px;
   margin-right: -20%;
 }
+
+.badge {
+  background-color: #058316;
+  color: var(--font);
+  padding: 4px 8px;
+  margin-left: 3%;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: -20%;
+}

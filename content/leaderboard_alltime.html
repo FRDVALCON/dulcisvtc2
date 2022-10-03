@@ -29,7 +29,7 @@
         <button class="lout" id="logoutButton"><i class="fa fa-power-off" aria-hidden="true"></i> Log Out</button>
         <hr class="nhr">
         <div class="version">
-            DulcisHub v2.2.8
+            DulcisHub v2.2.9
         </div>
         <script src="/assets/js/logoutbutton.js"></script>
     </div>
@@ -50,11 +50,28 @@
               <script src="/assets/js/lightmode.js"></script>
             </div>
           </div>
-          
         <div class="month">
             All Time leaderboard
             <a class="alltime" href="/hub/leaderboard">Monthly leaderboard</a>
         </div>
+
+        <div class="search_box">
+            <form action="" id="form2">
+                <div>
+                    <input type="text" id="search" class="search" placeholder="Enter Username Here">
+                    <input type="button" id="submit_form" class="submit_form" onclick="checkInput()" value="Submit">
+                </div>
+            </form>
+        </div>
+
+        <script>
+            function checkInput() {
+                var query = document.getElementById('search').value;
+                window.find(query);
+                return true;
+            }
+        </script>
+        
         <div class="leaderboard" id="leaderboard"></div>
     </div>
 

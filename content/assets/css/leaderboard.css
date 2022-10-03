@@ -317,3 +317,24 @@ hr.nhr {
   border-style: none;
   text-decoration: none;
 }
+
+.search{
+  width: 30%;
+  height: 35px;
+  border-style: none;
+  border-radius: 16px;
+  color: var(--font);
+  background-color: var(--bck2);
+  padding-left: 1%;
+  margin-left: 3.5%;
+}
+
+.submit_form{
+  width: 10%;
+  height: 35px;
+  border-radius: 16px;
+  color: var(--font);
+  background-color: var(--bck2);
+  border-color: var(--bck2);
+  font-size: large;
+}

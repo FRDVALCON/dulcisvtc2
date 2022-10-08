@@ -30,7 +30,7 @@
         <button class="lout" id="logoutButton"><i class="fa fa-power-off" aria-hidden="true"></i> Log Out</button>
         <hr class="nhr">
         <div class="version">
-            DulcisHub v2.2.9
+            DulcisHub v2.3.0
         </div>
         <script src="/assets/js/logoutbutton.js"></script>
     </div>
@@ -43,100 +43,154 @@
               <span class="close">&times;</span>
               <p><i class="fa fa-cog" aria-hidden="true"></i> Settings</p>
               <hr class="nhr">
-              <button class="light-mode-toggle" id="light-mode-toggle"> Toggle Light Mode</button><p></p>
-              <button class="light-mode-toggle" id="oled-mode-toggle"> Toggle Oled Mode</button><p></p>
+              <button class="light-mode-toggle" id="light-mode-toggle"> Toggle Theme</button><p></p>
               <a class="light-mode-toggle" href="/oauth/steam"><i class="fab fa-steam" aria-hidden="true"></i> Link Steam</a>
-              <script src="/assets/js/lightmode.js"></script>
+
+              <script src="assets/js/lightmode.js"></script>
             </div>
           </div>
 
-        <div class="downloads">
+          <div class="search_box">
+            <form action="" id="form2">
+                <div>
+                    <input type="text" id="search" class="search" placeholder="Search Downloads">
+                    <input type="button" id="submit_form" class="submit_form" onclick="checkInput()" value="Submit">
+                </div>
+            </form>
+        </div>
+
+        <script>
+            function checkInput() {
+                var query = document.getElementById('search').value;
+                window.find(query);
+                return true;
+            }
+        </script>
+
+          <div class="downloads">
             <div class="downloadd">
-                <img src="https://cdn.discordapp.com/attachments/996511232494419998/1005135076620775445/Untitled.png">
+                <img src="https://cdn.discordapp.com/attachments/1000523133389906053/1028279766211637299/Capture1.PNG">
                 <center>
+                    <b>TruckersMP UI</b>
+                    <hr class="nhr">
+                    <p></p>
                     <a class="btn" href="//sharemods.com/wv9ncujiq3a3/Dulcis_Logistics_TruckersMP_UI.7z.html"
                         target="_blank">Download</a>
                 </center>
             </div>
 
             <div class="downloadd">
-                <img src="https://cdn.discordapp.com/attachments/996511232494419998/1019735939364425738/Untitled.png">
+                <img src="https://cdn.discordapp.com/attachments/1000523133389906053/1028279050814357544/Capture1.PNG">
                 <center>
+                    <b>Navio Tracker</b>
+                    <hr class="nhr">
+                    <p></p>
                     <a class="btn" href="//navio.app/download" target="_blank">Download</a>
                 </center>
             </div>
 
              <div class="downloadd">
-                <img src="https://cdn.discordapp.com/attachments/908322983964180530/1019731241693618187/Untitled.png">
+                <img src="https://cdn.discordapp.com/attachments/1000523133389906053/1028275802816647198/Capture1.PNG">
                 <center>
+                    <b>Poppy Addon</b>
+                    <hr class="nhr">
+                    <p></p>
                     <a class="btn" href="//sharemods.com/wrfbc85v2k2h/Dulcis_Poppy_-_Addon_Hookup.zip.html" target="_blank">Download</a><span class="badge1">Mod</span>
                 </center>
             </div>
 
+            
             <div class="downloadd">
-                <img src="https://cdn.discordapp.com/attachments/908322983964180530/1019749973774045204/Untitled.png">
+                <img src="https://cdn.discordapp.com/attachments/1000523133389906053/1028272852618706984/Capture1.PNG">
                 <center>
+                    <b>Pennant Addon</b>
+                    <hr class="nhr">
+                    <p></p>
+                    <a class="btn" href="//sharemods.com/cqbam0o43ibn/DULCIS_PENNANT_-_ADDON.zip.html" target="_blank">Download</a><span class="badge1">Mod</span>
+                </center>
+            </div>
+
+           <div class="downloadd">
+                <img src="https://cdn.discordapp.com/attachments/1000523133389906053/1028271848246497321/Capture1.PNG">
+                <center>
+                    <b>Mug Addon</b>
+                    <hr class="nhr">
+                    <p></p>
+                    <a class="btn" href="//sharemods.com/1nt3ock3mtu5/DULCIS_MUG_-_ADDON.zip.html" target="_blank">Download</a><span class="badge1">Mod</span>
+                </center>
+            </div>
+
+            
+           <div class="downloadd">
+            <img src="https://cdn.discordapp.com/attachments/1000523133389906053/1028276367080554576/Capture1.PNG">
+            <center>
+                <b>Trailer Text</b>
+                    <hr class="nhr">
+                    <p></p>
+                <a class="btn" href="//sharemods.com/4pdncd0np9vi/DULCIS_TRAILER_TEXT.zip.html" target="_blank">Download</a><span class="badge1">Mod</span>
+            </center>
+        </div>
+
+            <div class="downloadd">
+                <img src="https://cdn.discordapp.com/attachments/1000523133389906053/1028275244286349373/Capture1.PNG">
+                <center>
+                    <b>Scania NG Interior</b>
+                    <hr class="nhr">
+                    <p></p>
                     <a class="btn" href="//sharemods.com/2lon5b1w01vb/Dulcis_Interior_-_Scania_2016.zip.html" target="_blank">Download</a><span class="badge1">Mod</span>
                 </center>
             </div>
 
            <div class="downloadd">
-                <img src="https://cdn.discordapp.com/attachments/908322983964180530/1020038227064791082/Untitled.png">
+                <img src="https://cdn.discordapp.com/attachments/1000523133389906053/1028274621553856533/Capture1.PNG">
                 <center>
+                    <b>Scania S Lightbox</b>
+                    <hr class="nhr">
+                    <p></p>
                     <a class="btn" href="//sharemods.com/xr2bizxak1ex/Dulcis_Roof_Set.zip.html" target="_blank">Download</a><span class="badge1">Mod</span>
                 </center>
             </div>
 
 
            <div class="downloadd">
-                <img src="https://cdn.discordapp.com/attachments/908322983964180530/1020066103399022634/Untitled.png">
+                <img src="https://cdn.discordapp.com/attachments/1000523133389906053/1028273758194118766/Capture1.PNG">
                 <center>
+                    <b>Scania NG MudFlap</b>
+                    <hr class="nhr">
+                    <p></p>
                     <a class="btn" href="//sharemods.com/ryw6ylwslk1c/DULCIS_MUDFLAP_SCANIA_2016.zip.html" target="_blank">Download</a><span class="badge1">Mod</span>
                 </center>
             </div>
 
             <div class="downloadd">
-                <img src="https://cdn.discordapp.com/attachments/908322983964180530/1020107735053901926/Untitled.png">
+                <img src="https://cdn.discordapp.com/attachments/1000523133389906053/1028273327883698246/Capture1.PNG">
                 <center>
+                    <b>Scania NG Bumper</b>
+                    <hr class="nhr">
+                    <p></p>
                     <a class="btn" href="//sharemods.com/fejzhs0ma8vg/DULCIS_BUMPER_-_SCANIA_2016.zip.html" target="_blank">Download</a><span class="badge1">Mod</span>
                 </center>
             </div>
 
-            <div class="downloadd">
-                <img src="https://cdn.discordapp.com/attachments/908322983964180530/1020479655477788682/Untitled.png">
-                <center>
-                    <a class="btn" href="//sharemods.com/cqbam0o43ibn/DULCIS_PENNANT_-_ADDON.zip.html" target="_blank">Download</a><span class="badge1">Mod</span>
-                </center>
-            </div>
-
            <div class="downloadd">
-                <img src="https://cdn.discordapp.com/attachments/908322983964180530/1020485071804846140/Untitled.png">
+                <img src="https://cdn.discordapp.com/attachments/1000523133389906053/1028271256144977940/Capture1.PNG">
                 <center>
-                    <a class="btn" href="//sharemods.com/1nt3ock3mtu5/DULCIS_MUG_-_ADDON.zip.html" target="_blank">Download</a><span class="badge1">Mod</span>
-                </center>
-            </div>
-
-           <div class="downloadd">
-                <img src="https://cdn.discordapp.com/attachments/908322983964180530/1020817515946975323/Untitled.png">
-                <center>
-                    <a class="btn" href="//sharemods.com/4pdncd0np9vi/DULCIS_TRAILER_TEXT.zip.html" target="_blank">Download</a><span class="badge1">Mod</span>
-                </center>
-            </div>
-
-           <div class="downloadd">
-                <img src="https://cdn.discordapp.com/attachments/980534453334061146/1021221066280017930/image0.jpg">
-                <center>
+                    <b>Scania Window Sticker</b>
+                    <hr class="nhr">
+                    <p></p>
                     <a class="btn" href="//sharemods.com/eyctkzlh2dwt/DULCIS_STICKER_-_SCANIA_2016.zip.html" target="_blank">Download</a><span class="badge1">Mod</span>
                 </center>
             </div>
 
             <div class="downloadd">
-                <img src="https://cdn.discordapp.com/attachments/980534453334061146/1027983820558962708/Capture1.PNG">
+                <img src="https://cdn.discordapp.com/attachments/1000523133389906053/1028270443146256384/Capture1.PNG">
                 <center>
+                    <b>MAN E6 Lightbox</b>
+                    <hr class="nhr">
+                    <p></p>
                     <span class="badge">New</span><a class="btn" href="//modsfire.com/1KM9n9fV9yd0X9N" target="_blank">Download</a><span class="badge1">Mod</span>
                 </center>
             </div>
-
 
         </div>
     </div>
